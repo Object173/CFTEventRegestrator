@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">CFT Event Regestrator</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list_is_empty">List is empty</string>
+    <string name="changed_apply">apply</string>
+
+    <string name="event_action_bar_title_default">Visited: %d/%d</string>
+    <string name="event_action_bar_title_changed">Marked: %d</string>
+    <string name="participant_fragment_search_hint">Name of the participant</string>
+    <string name="event_search_hint">Enter event title</string>
+    <string name="send_to_email_action">send to email</string>
+    <string name="call_to_phone_action">call to phone</string>
+
+    <string name="send_action_chooser_title">Email participant to…</string>
+    <string name="call_action_chooser_title">Call the participant…</string>
+
+    <string name="share_action_chooser">Share event to…</string>
+    <string name="participant_phone_label">Phone:</string>
+    <string name="participant_company_label">Company:</string>
+    <string name="prticipant_position_label">Position:</string>
+    <string name="participant_email_label">Email:</string>
+    <string name="participant_date_of_registration_label">Date of registration</string>
+    <string name="participant_additional_information_label">Additional Information:</string>
+
+    <string name="error_not_found_item">Could not find object</string>
+    <string name="error_no_internet">No internet connection</string>
+    <string name="error_server_not_responding">Server is not responding</string>
+    <string name="error_bad_response">Incorrect server response</string>
+    <string name="error_fail_request">Error connecting to server</string>
+    <string name="all_event_filter_title">All event</string>
+    <string name="only_active_filter_title">Only active</string>
+    <string name="only_no_active_filter_title">Only no active</string>
+    <string name="sort_visited_action">Visited</string>
+    <string name="sort_company_action">Company</string>
+    <string name="sort_name_action">Name</string>
+</resources>

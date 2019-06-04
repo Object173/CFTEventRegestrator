@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF1717</color>
+    <color name="colorPrimaryDark">#DB0000</color>
+    <color name="colorAccent">#FF0606</color>
+    <color name="colorSelected">#F8BBD0</color>
+    <color name="colorBackground">#FFFFFF</color>
+
+    <color name="progress_start">#FFF200</color>
+    <color name="progress_end">#77FF00</color>
+
+    <color name="splash_background">#FFFFFF</color>
+</resources>

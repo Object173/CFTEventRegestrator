@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_graph" app:startDestination="@id/eventListFragment">
+
+    <fragment android:id="@+id/eventListFragment"
+              android:name="com.object173.cfteventregestrator.feature.event.presentation.EventListFragment"
+              android:label="EventListFragment">
+        <action android:id="@+id/action_eventListFragment_to_participantListFragment"
+                app:destination="@id/participantListFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/participantListFragment"
+              android:name="com.object173.cfteventregestrator.feature.participant.list.presentation.ParticipantListFragment"
+              android:label="ParticipantListFragment">
+        <action android:id="@+id/action_participantListFragment_to_participantItemFragment"
+                app:destination="@id/participantItemFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/participantItemFragment"
+              android:name="com.object173.cfteventregestrator.feature.participant.item.presentation.ParticipantItemFragment"
+              android:label="ParticipantItemFragment"/>
+</navigation>

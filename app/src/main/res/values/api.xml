@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">https://team.cft.ru</string>
+
+    <string name="auth_attr">token</string>
+    <string name="auth_token">cftte@mtest20!9</string>
+</resources>

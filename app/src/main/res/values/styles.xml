@@ -1,0 +1,85 @@
+<resources>
+
+    <declare-styleable name = "customStyle">
+        <attr format="reference" name="cardViewPadding"/>
+        <attr format="reference" name="cardViewParticipant"/>
+        <attr format="reference" name="cardViewCheckBox"/>
+        <attr format="reference" name="headlineLight"/>
+        <attr format="reference" name="headlineDark"/>
+        <attr format="reference" name="baselineLight"/>
+        <attr format="reference" name="baselineDark"/>
+        <attr format="dimension" name="minPadding"/>
+    </declare-styleable>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        
+        <item name="cardViewPadding">@style/CardViewPadding</item>
+        <item name="cardViewParticipant">@style/Participant.CardView</item>
+        <item name="cardViewCheckBox">@style/Participant.CheckBox</item>
+        <item name="headlineLight">@style/Headline.Light</item>
+        <item name="headlineDark">@style/Headline.Dark</item>
+        <item name="baselineLight">@style/Baseline.Light</item>
+        <item name="baselineDark">@style/Baseline</item>
+        <item name="minPadding">8dp</item>
+
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarHorizontal</item>
+    </style>
+
+    <style name="ProgressBarHorizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+        <item name="android:layout_marginTop">-6dp</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/splash_logo</item>
+    </style>
+
+    <style name="CardViewPadding" parent="CardView">
+        <item name="android:paddingBottom">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+    </style>
+
+    <style name="Participant.CardView" parent="CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="Participant.CheckBox" parent="CardView">
+        <item name="android:checkable">false</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:scaleX">1.5</item>
+        <item name="android:scaleY">1.5</item>
+    </style>
+
+    <style name="Headline" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="Headline.Light" parent="Headline">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Headline.Dark" parent="Headline">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Baseline" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Baseline.Light" parent="Baseline">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

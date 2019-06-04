@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.object173.cfteventregestrator.feature.base.presentation.list.BaseListViewModel.ViewState"/>
+        <variable name="viewModel"
+                  type="com.object173.cfteventregestrator.feature.base.presentation.list.BaseListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:refreshing="@{viewModel.updateStatus}"
+                app:onRefreshListener="@{() -> viewModel.updateData()}">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:visibility="@{viewModel.viewState == ViewState.CONTENT ? View.VISIBLE : View.GONE}"/>
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:visibility="@{viewModel.updateStatus ? View.VISIBLE : View.GONE}"
+                        style="?android:attr/progressBarStyleHorizontal"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/empty_list_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/list_is_empty"
+                        android:visibility="@{viewModel.viewState == ViewState.EMPTY ? View.VISIBLE : View.GONE}"/>
+
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigationView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:background="?android:attr/windowBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:itemBackground="@color/colorBackground"
+                app:itemIconTint="@color/colorAccent"
+                app:itemTextColor="@color/colorAccent"
+                app:onNavigationItemSelected="@{viewModel.filterSetItemListener}"
+                app:menu="@{viewModel.filterMenu()}"
+                app:selectedItem="@{viewModel.currentFilter}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
